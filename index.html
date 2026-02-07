@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Guess Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 Word Guess Challenge</h1>
+            <div class="stats">
+                <span>Score: <strong id="score">0</strong></span>
+                <span>Streak: <strong id="streak">0</strong></span>
+            </div>
+        </header>
+
+        <main>
+            <div class="game-card">
+                <div class="hint-section">
+                    <h2>What's the word?</h2>
+                    <p class="hint" id="hint"></p>
+                </div>
+
+                <div class="word-display">
+                    <div id="wordPattern" class="word-pattern"></div>
+                </div>
+
+                <div class="input-section">
+                    <input 
+                        type="text" 
+                        id="guess" 
+                        placeholder="Type your guess..." 
+                        maxlength="20"
+                        autocomplete="off"
+                    >
+                    <button id="submitBtn" class="btn btn-primary">Guess</button>
+                </div>
+
+                <div id="feedback" class="feedback"></div>
+
+                <div class="hints-remaining">
+                    <p>Hints available: <strong id="hintsLeft">0</strong></p>
+                    <button id="hintBtn" class="btn btn-secondary">Show Hint</button>
+                </div>
+
+                <div class="button-group">
+                    <button id="skipBtn" class="btn btn-secondary">Skip Word</button>
+                    <button id="newGameBtn" class="btn btn-primary">New Game</button>
+                </div>
+
+                <div id="message" class="message"></div>
+            </div>
+
+            <div class="info-section">
+                <h3>How to Play</h3>
+                <ul>
+                    <li>Read the hint and guess the word</li>
+                    <li>You have 6 attempts per word</li>
+                    <li>Use hints if you get stuck</li>
+                    <li>Build your streak for more points!</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>Relax and enjoy the game 🌙</p>
+        </footer>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
